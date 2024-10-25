@@ -33,27 +33,26 @@ Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
       title: Text(
-        category, // The category name displayed as the title
+        category, 
         style: const TextStyle(
-          fontSize: 22.0, // Increase font size for visibility
-          fontWeight: FontWeight.bold, // Make the title bold
-          color: Colors.white, // Set the title text color
+          fontSize: 22.0, 
+          fontWeight: FontWeight.bold, 
+          color: Colors.white, 
         ),
       ),
-      backgroundColor: Colors.brown.shade700, // Dark brown background to match coffee theme
-      centerTitle: true, // Center the title
-      elevation: 4.0, // Adds a subtle shadow for depth (set to 0.0 for flat app bar)
+      backgroundColor: Colors.brown.shade700, 
+      centerTitle: true, 
+      elevation: 4.0, 
       leading: IconButton(
-        icon: const Icon(Icons.arrow_back_ios, color: Colors.white), // Custom back icon color
+        icon: const Icon(Icons.arrow_back_ios, color: Colors.white), 
         onPressed: () {
-          Navigator.pop(context); // Return to previous screen when pressed
+          Navigator.pop(context); 
         },
       ),
       actions: [
         IconButton(
-          icon: const Icon(Icons.shopping_cart, color: Colors.white), // Cart icon for potential future use
+          icon: const Icon(Icons.shopping_cart, color: Colors.white), 
           onPressed: () {
-            // Logic to navigate to shopping cart or orders page
           },
         ),
       ],
@@ -73,21 +72,21 @@ Widget build(BuildContext context) {
                 subcategory,
                 style: const TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 22.0, // Larger font size for subcategory titles
+                  fontSize: 22.0, 
                 ),
               ),
-              const SizedBox(height: 12.0), // More spacing between subcategory title and drinks
+              const SizedBox(height: 12.0), 
               Wrap(
                 spacing: 16.0,
                 runSpacing: 16.0,
                 children: drinks.map((drink) {
                   return ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.all(24.0), // Increase padding for larger buttons
+                      padding: const EdgeInsets.all(24.0), 
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16.0), // Rounded corners for buttons
+                        borderRadius: BorderRadius.circular(16.0), 
                       ),
-                      backgroundColor: Colors.brown.shade100, // Light brown for buttons
+                      backgroundColor: Colors.brown.shade100, 
                     ),
                     onPressed: () {
                       Navigator.push(
@@ -102,14 +101,14 @@ Widget build(BuildContext context) {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         CircleAvatar(
-                          backgroundImage: AssetImage(drinkImages[drink] ?? 'assets/images/kaffehaus_logo.jpg'), // Drink-specific image
-                          radius: 48.0, // Larger size for drink image
+                          backgroundImage: AssetImage(drinkImages[drink] ?? 'assets/images/kaffehaus_logo.jpg'), 
+                          radius: 48.0, 
                         ),
                         const SizedBox(height: 8.0),
                         Text(
                           drink,
                           style: const TextStyle(
-                            fontSize: 18.0, // Larger text for drinks
+                            fontSize: 18.0, 
                             fontWeight: FontWeight.bold,
                           ),
                         ),

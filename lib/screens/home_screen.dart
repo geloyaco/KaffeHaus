@@ -14,7 +14,6 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // KaffeHaus Logo
               Image.asset(
                 'assets/images/kaffehaus_logo.jpg',
                 height: 300.0,
